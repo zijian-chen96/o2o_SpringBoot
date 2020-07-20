@@ -1,0 +1,19 @@
+package com.imooc.o2o.dao;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+
+import com.imooc.o2o.entity.HeadLine;
+
+public interface HeadLineDao {
+	
+	/**
+	 * search role(headLineName)
+	 * 
+	 * @param headLineCondition
+	 * @return
+	 */
+	List<HeadLine> queryHeadLine(@Param("headLineCondition") HeadLine headLineCondition);
+
+}

@@ -1,0 +1,4 @@
+
+mvn clean package -Dmaven.test.skip=true
+
+scp -i "o2o.pem" o2o-0.0.1-SNAPSHOT.war centos@ec2-54-177-3-54.us-west-1.compute.amazonaws.com:.

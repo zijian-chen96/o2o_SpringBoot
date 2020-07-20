@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Product Detail</title>
+<meta name="description"
+	content="MSUI: Build mobile apps with simple HTML, CSS, and JS components.">
+<meta name="author" content="阿里巴巴国际UED前端">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+
+<!-- Google Web Fonts -->
+
+<link rel="stylesheet" href="../resources/css/common/sm.min.css">
+<link rel="stylesheet" href="../resources/css/common/sm-extend.min.css">
+<link rel="stylesheet"
+	href="../resources/css/frontend/productdetail.css">
+
+</head>
+<body>
+
+	<div class="page-group">
+		<div class="page">
+			<header class="bar bar-nav">
+				<a class="button button-link button-nav pull-left" external href="#"
+					onClick="javascript :history.back(-1);" data-transition='slide-out'>
+					<span class="icon icon-left"></span> Return
+				</a>
+				<h1 class="title" id="product-name">Product Detail</h1>
+			</header>
+
+			<nav class="bar bar-tab">
+				<a class="tab-item" href="/o2o/frontend/index" external> <span
+					class="icon icon-home"></span> <span class="tab-label">Main
+						Page</span>
+				</a> <a class="tab-item" href="#" id="me"> <span
+					class="icon icon-me"></span> <span class="tab-label">Me</span>
+				</a>
+			</nav>
+
+			<div class="content infinite-scroll infinite-scroll-bottom"
+				data-distance="100">
+				<!-- info page -->
+				<div class="shop-detail-dev">
+					<div class="card">
+						<div valign="bottom"
+							class="card-header color-white no-border no-padding">
+							<img class="card-cover" id="product-img" src="" alt="" />
+						</div>
+						<div class="card-content">
+							<div class="card-content-inner">
+								<p class="color-gray">
+									<span id="product-time">2015/01/15</span> <span
+										class="pull-right" id="product-point"></span>
+								</p>
+								<p id="price" hidden="true">
+									<span class="color-gray" id="normalPrice"> </span> <span><font
+										color="red" size="4" id="promotionPrice"></font></span>
+								</p>
+								<p id="product-desc"></p>
+							</div>
+						</div>
+						<div class="card-img" id="imgList">
+							<!-- <a href="#" class="link">like</a> -->
+							<!-- <a href="#" class="link">more</a> -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- side bar -->
+			<div class="panel-overlay"></div>
+			<div class="panel panel-right panel-reveal" id="panel-right-demo">
+				<div class="content-block">
+					<p>
+						<a href="/o2o/local/accountbind?usertype=1" class="close-panel">Link
+							Account</a>
+					</p>
+					<p>
+						<a href="/o2o/local/changepsw?usertype=1" class="close-panel">Change
+							Password</a>
+					</p>
+					<p>
+						<a href="/o2o/frontend/myrecord" class="close-panel">Order
+							History</a>
+					</p>
+					<p>
+						<a href="/o2o/frontend/mypoint" class="close-panel">My Points</a>
+					</p>
+					<p>
+						<a href="/o2o/frontend/pointrecord" class="close-panel">Redeem
+							Record</a>
+					</p>
+					<p>
+						<a href="#" usertype="1" class="close-panel" id="log-out">Logout</a>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<script type="text/javascript"
+		src="../resources/js/common/zepto.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../resources/js/common/sm.min.js"
+		charset="utf-8"></script>
+	<script type="text/javascript"
+		src="../resources/js/common/sm-extend.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../resources/js/common/common.js"
+		charset="utf-8"></script>
+	<script type="text/javascript"
+		src="../resources/js/frontend/productdetail.js" charset="utf-8"></script>
+	<script type='text/javascript' src='../resources/js/local/logout.js'
+		charset='utf-8'></script>
+</body>
+</html>

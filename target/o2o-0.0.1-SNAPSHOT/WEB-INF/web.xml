@@ -1,0 +1,90 @@
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1" metadata-complete="true">
+
+	<display-name>Archetype Created Web Application</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	
+	<servlet>
+		<servlet-name>Kaptcha</servlet-name>
+		<servlet-class>com.google.code.kaptcha.servlet.KaptchaServlet</servlet-class>
+		
+		<!-- set up bolder line -->
+		<init-param>
+			<param-name>kaptcha.border</param-name>
+			<param-value>no</param-value>
+		</init-param>
+		
+		<!-- text color -->
+		<init-param>
+			<param-name>kaptcha.textproducer.font.color</param-name>
+			<param-value>red</param-value>
+		</init-param>
+		
+		<!-- image width -->
+		<init-param>
+			<param-name>kaptcha.image.width</param-name>
+			<param-value>135</param-value>
+		</init-param>
+		
+		<!-- text type for verify code -->
+		<init-param>
+			<param-name>kaptcha.textproducer.char.string</param-name>
+			<param-value>ACDEFHKPRSTWX345679</param-value>
+		</init-param>
+		
+		<!-- image height -->
+		<init-param>
+			<param-name>kaptcha.image.height</param-name>
+			<param-value>50</param-value>
+		</init-param>
+		
+		<!-- text size -->
+		<init-param>
+			<param-name>kaptcha.textproducer.font.size</param-name>
+			<param-value>43</param-value>
+		</init-param>
+		
+		<!-- effect tool -->
+		<init-param>
+			<param-name>kaptcha.noise.color</param-name>
+			<param-value>black</param-value>
+		</init-param>
+		
+		<!-- text number -->
+		<init-param>
+			<param-name>kaptcha.textproducer.char.length</param-name>
+			<param-value>4</param-value>
+		</init-param>
+		
+		<!-- font types -->
+		<init-param>
+			<param-name>kaptcha.textproducer.font.names</param-name>
+			<param-value>Arial</param-value>
+		</init-param>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Kaptcha</servlet-name>
+		<url-pattern>/Kaptcha</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>spring-dispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:spring/spring-*.xml</param-value>
+		</init-param>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>spring-dispatcher</servlet-name>
+		<!-- default match all requests -->
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	
+</web-app>
